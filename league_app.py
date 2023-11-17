@@ -2,8 +2,8 @@ import streamlit as st
 import pandas as pd
 
 # Get username and password from Streamlit Sharing environment secrets
-correct_username = st.secrets["USERNAME"]
-correct_password = st.secrets["PASSWORD"]
+username = st.secrets["my_username"]
+password = st.secrets["my_password"]
 
 # Login
 username = st.sidebar.text_input("Username:")
