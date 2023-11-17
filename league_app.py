@@ -19,7 +19,7 @@ team_names = [
     "Wuhan University of Technology",
     "Hubei University of Technology",
     "Wuhan University",
-    "Tonji University",
+    "Tongji University",
     "Zhonghu FC",
     "Huazhong University of Technology",
     "China University of Geosciences",
