@@ -6,11 +6,12 @@ username = st.secrets["my_username"]
 password = st.secrets["my_password"]
 
 # Login
-username = st.sidebar.text_input("Username:")
-password = st.sidebar.text_input("Password:", type="password")
+username_input = st.sidebar.text_input("Username:")
+password_input = st.sidebar.text_input("Password:", type="password")
 
 # Check if the user is logged in
-is_logged_in = (my_username == username) and (my_password == password)
+is_logged_in = (username == username_input) and (password == password_input)
+
 
 # Define team names
 team_names = [
