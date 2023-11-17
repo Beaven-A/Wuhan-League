@@ -10,7 +10,7 @@ username = st.sidebar.text_input("Username:")
 password = st.sidebar.text_input("Password:", type="password")
 
 # Check if the user is logged in
-is_logged_in = (username == correct_username) and (password == correct_password)
+is_logged_in = (username == my_username) and (password == my_password)
 
 # Define team names
 team_names = [
