@@ -1,14 +1,9 @@
 import streamlit as st
 import pandas as pd
-import os
-from dotenv import load_dotenv
 
-# Load environment variables from .env file
-load_dotenv()
-
-# Get username and password from environment variables
-correct_username = os.getenv("USERNAME")
-correct_password = os.getenv("PASSWORD")
+# Get username and password from Streamlit Sharing environment secrets
+correct_username = st.secrets["USERNAME"]
+correct_password = st.secrets["PASSWORD"]
 
 # Login
 username = st.sidebar.text_input("Username:")
@@ -50,7 +45,7 @@ except FileNotFoundError:
     }
     df = pd.DataFrame(data)
 
-# Streamlit app
+# Title
 st.title("Wuhan League Table")
 
 if is_logged_in:
@@ -73,10 +68,9 @@ if is_logged_in:
     # Start numbering at 1 for logged-in users
     df.index += 1
 else:
-    # Start numbering at 1 for people without login details
     df.index = df.index + 1 if is_logged_in else range(1, len(df) + 1)
 
-# Display the updated table or the read-only table
+# Display updated table or the read-only table
 if is_logged_in:
     st.table(df)
 else:
