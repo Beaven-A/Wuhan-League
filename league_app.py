@@ -47,7 +47,7 @@ except FileNotFoundError:
     df = pd.DataFrame(data)
 
 # Title
-st.title("Wuhan League Table")
+st.title("Wuhan Inter-Uni League Table")
 
 if is_logged_in:
     # Update table values
